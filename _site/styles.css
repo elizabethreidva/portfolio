@@ -17,8 +17,11 @@
 	<main>
     	
 <hr />
-<p>This is the main content</p>
-
+body {
+  background: white;
+  color: black;
+  font-family: "Trebuchet MS", "Arial", "Helvetica", sans-serif;
+}
 <hr />
 
 	</main>

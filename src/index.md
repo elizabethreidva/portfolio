@@ -1,6 +1,5 @@
 ---
-layout: layouts/main.njk
-title: Elizabeth Reid, Design Engineer
+pagetitle: ""
 ---
 
-This is content in the index file. 
+This is the main content {{ eleventyNavigation.key }}

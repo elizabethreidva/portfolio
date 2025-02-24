@@ -5,7 +5,7 @@
     "main": "index.md",
     "scripts": {
         "build": "eleventy",
-		"build-ghpages": "eleventy",
+        "build-ghpages": "eleventy",
         "start": "eleventy --serve"
     },
     "repository": {
@@ -23,7 +23,8 @@
     "homepage": "https://github.com/elizabethreidva/portfolio#readme",
     "dependencies": {
         "@11ty/eleventy": "^3.0.0",
-        "netlify-plugin-cache": "^1.0.3"
+        "netlify-plugin-cache": "^1.0.3",
+        "sass": "^1.85.0"
     },
     "type": "module"
 }
