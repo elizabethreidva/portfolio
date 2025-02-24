@@ -5,6 +5,7 @@
     "main": "index.md",
     "scripts": {
         "build": "eleventy",
+		"build-ghpages": "eleventy",
         "start": "eleventy --serve"
     },
     "repository": {
