@@ -4,9 +4,9 @@
     "description": "Portfolio site for Elizabeth Reid",
     "main": "index.md",
     "scripts": {
-		"build": "eleventy",
-		"start": "eleventy --serve"
-	},
+        "build": "eleventy",
+        "start": "eleventy --serve"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/elizabethreidva/portfolio.git"
@@ -21,7 +21,8 @@
     },
     "homepage": "https://github.com/elizabethreidva/portfolio#readme",
     "dependencies": {
-        "@11ty/eleventy": "^3.0.0"
+        "@11ty/eleventy": "^3.0.0",
+        "netlify-plugin-cache": "^1.0.3"
     },
     "type": "module"
 }
