@@ -1,0 +1,12 @@
+body {
+  background: white;
+  color: black;
+  font-family: "Trebuchet MS", "Arial", "Helvetica", sans-serif;
+}
+
+header,
+main,
+footer {
+  max-width: 1000px;
+  margin: auto auto;
+}
