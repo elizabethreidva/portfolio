@@ -35,8 +35,14 @@ export default function (eleventyConfig) {
 
 export const config = {
 	dir: {
+		// data: "_data", // default is _data
+		// includes: "_includes", // default is _includes
 		input: "src", // default is .
-		layouts: "_layouts", // default is data.includes
-		pathPrefix: "/portfolio/", // default is /
-	}
-  };
+		layouts: "_layouts", // default is dir.includes
+		// output: "_site", // default is _site
+	},
+	// htmlTemplateEngine: "liquid", // default is liquid\
+	// markdownTemplateEngine: "liquid", // default is liquid
+	pathPrefix: "/portfolio/", // default is /
+	// templateFormats: ""
+};
