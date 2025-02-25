@@ -1,6 +1,6 @@
 import * as sass from 'sass';
 import clean from "eleventy-plugin-clean";
-import { HtmlBasePlugin } from "@11ty/eleventy";
+import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 
 export default function (eleventyConfig) {
 	eleventyConfig.addTemplateFormats("scss");
@@ -24,7 +24,7 @@ export default function (eleventyConfig) {
 	eleventyConfig.addPlugin(clean);
 
 	// HTML Base plugin for handling different deploy locations
-	eleventyConfig.addPlugin(HtmlBasePlugin);
+	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
 	eleventyConfig.addFilter("makePath", 
 		function(page) {
