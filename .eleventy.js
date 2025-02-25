@@ -1,4 +1,5 @@
 import * as sass from 'sass';
+import clean from "eleventy-plugin-clean";
 
 export default function (eleventyConfig) {
 	eleventyConfig.addTemplateFormats("scss");
@@ -17,17 +18,21 @@ export default function (eleventyConfig) {
 			};
 		},
 	});
+
+	// Add build clean up plugin
+	eleventyConfig.addPlugin(clean);
+
+	eleventyConfig.addFilter("makePath", 
+		function(page) {
+			return page.filePathStem.substring(0,page.filePathStem.lastIndexOf(page.fileSlug));
+		}
+	);	
 };
 
 export const config = {
 	dir: {
 		input: "src", // default is .
-		// includes: "_includes", // default is _includes
 		layouts: "_layouts", // default is data.includes
-		// data: "_data", // default is _data
-		// output: "_site", // default is _site
-		// markdownTemplateEngine: "liquid", // default is liquid
-		// htmlTemplateEngine: "liquid", // default is liquid
 		pathPrefix: "/portfolio/", // default is /
 	}
   };

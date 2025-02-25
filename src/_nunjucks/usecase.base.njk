@@ -1,0 +1,37 @@
+<article>
+	<h1>{{ pageTitle }}</h1>
+	<section>
+		<h2>Problem statement</h2>
+		{% block problem %}
+		<i>Describe the problem</i>
+		{% endblock %}	
+	</section>
+
+	<section>
+		<h2>Objective</h2>
+		{% block objective %}
+		<i>Define the objective</i>
+		{% endblock %}	
+	</section>
+
+	<section>
+		<h2>Team</h2>
+		{% block team %}
+		<i>List the team</i>
+		{% endblock %}	
+	</section>
+
+	<section>
+		<h2>Methodology</h2>
+		{% block method %}
+		<i>Detail the methodology</i>
+		{% endblock %}	
+	</section>
+
+	<section>
+		<h2>Challenges and Lessons Learned</h2>
+		{% block challenges %}
+		<i>Outline the challenges and lessons learned</i>
+		{% endblock %}	
+	</section>			
+</article>
