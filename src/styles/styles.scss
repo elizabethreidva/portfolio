@@ -4,9 +4,9 @@ body {
 	font-family: "Trebuchet MS", "Arial", "Helvetica", sans-serif;
 }
 
-header,
-main,
-footer {
+body > header,
+body > main,
+body > footer {
 	max-width: 1000px;
 	margin: auto auto;
 }
