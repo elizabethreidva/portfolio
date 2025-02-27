@@ -1,12 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 body {
   background: white;
   color: black;
-  font-family: "Trebuchet MS", "Arial", "Helvetica", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
 }
 
 body > header,
-body > main,
+body > div.container,
 body > footer {
   max-width: 1000px;
   margin: auto auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oswald", "Roboto", "Arial", sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+body > header {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-column-gap: 28px;
+  grid-row-gap: 0px;
+}
+body > header img.profile {
+  grid-area: 1/1/3/2;
+  width: 120px;
+  height: 120px;
+  border: 4px solid black;
+  border-radius: 50%;
+}
+body > header .title {
+  grid-area: 1/2/2/3;
+  font-size: 2.4em;
+  line-height: 1em;
+  padding: 0.6em 0 0.6em 0;
+  margin: 0 0 0.4em 0;
+  border-bottom: 2px solid black;
+}
+body > header nav > ul {
+  grid-area: 2/2/3/3;
+  margin: 0;
+  padding: 0;
+}
+body > header nav > ul > li {
+  display: inline-block;
+  margin: 0;
+  padding: 0.4em 1em 0.4em 0;
+  font-weight: 600;
+}
+
+body > div.container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+body > div.container main {
+  width: calc(100% - 144px);
+}
+body > div.container aside {
+  width: 144px;
+}
+
+body > footer {
+  margin-top: 24px;
+  border-top: 2px solid black;
+  padding-top: 8px;
 }
