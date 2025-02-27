@@ -2,6 +2,7 @@
 pageTitle: "Use Cases"
 pageType: "index"
 ---
+<h2>{{ pageTitle }}</h2>
 {%- if collections.use-case.length > 1 -%}
 <ul>
 	{%- for use-case in collections.use-case -%}

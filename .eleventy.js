@@ -3,6 +3,19 @@ import clean from "eleventy-plugin-clean";
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 
 export default function (eleventyConfig) {
+	// Add build clean up plugin
+	eleventyConfig.addPlugin(clean);
+
+	// HTML Base plugin for handling different deploy locations
+	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+
+	eleventyConfig.addFilter("makePath", 
+		function(page) {
+			return page.filePathStem.substring(0,page.filePathStem.lastIndexOf(page.fileSlug));
+		}
+	);	
+
+	// Add scss support
 	eleventyConfig.addTemplateFormats("scss");
 
 	// Creates the extension for use
@@ -20,17 +33,9 @@ export default function (eleventyConfig) {
 		},
 	});
 
-	// Add build clean up plugin
-	eleventyConfig.addPlugin(clean);
-
-	// HTML Base plugin for handling different deploy locations
-	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
-
-	eleventyConfig.addFilter("makePath", 
-		function(page) {
-			return page.filePathStem.substring(0,page.filePathStem.lastIndexOf(page.fileSlug));
-		}
-	);	
+	// Copy any .jpg file to `_site`, via Glob pattern
+	// Keeps the same directory structure.
+	eleventyConfig.addPassthroughCopy("**/*.jpg");	
 };
 
 export const config = {

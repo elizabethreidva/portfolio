@@ -1,12 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+$heading-font: "Oswald", "Roboto", "Arial", sans-serif;
+$body-font: "Roboto", "Arial", sans-serif;
+$profile-pic-width: 120px;
+$profile-pic-allowance: $profile-pic-width + 24px;
+
 body {
 	background: white;
 	color: black;
-	font-family: "Trebuchet MS", "Arial", "Helvetica", sans-serif;
+	font-family: $body-font;
+	font-size: 16px;
 }
 
 body > header,
-body > main,
+body > div.container,
 body > footer {
 	max-width: 1000px;
 	margin: auto auto;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+	font-family: $heading-font;
+	font-weight: 400;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 1.2em;
+}
+
+// Main header content
+body > header {
+	display: grid;
+	grid-template-columns: 120px 1fr;
+	grid-template-rows: auto 1fr;
+	grid-column-gap: 28px;
+	grid-row-gap: 0px;
+
+	img.profile {
+		grid-area: 1 / 1 / 3 / 2;
+		width: $profile-pic-width;
+		height: $profile-pic-width;
+		border: 4px solid black;
+		border-radius: 50%;
+	}
+
+	.title {
+		grid-area: 1 / 2 / 2 / 3;
+		font-size: 2.4em;
+		line-height: 1em;
+		padding: 0.6em 0 0.6em 0;
+		margin: 0 0 0.4em 0;
+		border-bottom: 2px solid black;
+	}
+
+	nav > ul {
+		grid-area: 2 / 2 / 3 / 3;
+		margin: 0;
+		padding: 0;
+
+		> li {
+			display: inline-block;
+			margin: 0;
+			padding: 0.4em 1em 0.4em 0;
+			font-weight: 600;	
+		}
+	}
+}
+
+// Main body
+body > div.container {
+	display: flex;
+	flex-direction: row-reverse;
+
+	main {
+		width: calc(100% - $profile-pic-allowance);
+	}
+	
+	aside {
+		width: $profile-pic-allowance;
+	}	
+}
+
+// Main footer
+body > footer {
+	margin-top: 24px;
+	border-top: 2px solid black;
+	padding-top: 8px;
 }
