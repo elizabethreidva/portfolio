@@ -1,0 +1,1 @@
+function switchTabs(s,l){const t="active",e=s.parentElement,n=e.parentElement,i=s.classList.contains(t);if(n&&e){let o=e.getElementsByClassName("tab");for(let a of o)a.classList.remove(t);let c=n.getElementsByClassName("tab-content");for(let a of c)a.classList.remove(t);s.classList.add(t),document.getElementById(l).classList.add(t)}}
