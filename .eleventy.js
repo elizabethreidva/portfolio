@@ -1,4 +1,5 @@
 import * as sass from 'sass';
+import * as esbuild from 'esbuild';
 import clean from "eleventy-plugin-clean";
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 
@@ -33,9 +34,20 @@ export default function (eleventyConfig) {
 		},
 	});
 
+	// Run esbuild before anything else (using bundle for js)
+	eleventyConfig.on('eleventy.before', async () => {
+		await esbuild.build({
+			entryPoints: ['src/scripts/*.mjs'],
+			outdir: 'src/scripts',
+			minify: true,
+			sourcemap: false,
+		})
+	})
+	eleventyConfig.addPassthroughCopy("./src/**/*.js");	
+
 	// Copy any .jpg file to `_site`, via Glob pattern
 	// Keeps the same directory structure.
-	eleventyConfig.addPassthroughCopy("**/*.jpg");	
+	eleventyConfig.addPassthroughCopy("./src/**/*.jpg");	
 };
 
 export const config = {

@@ -24,6 +24,7 @@
     "dependencies": {
         "@11ty/eleventy": "^3.0.0",
         "eleventy-plugin-clean": "^2.0.1",
+        "esbuild": "^0.25.0",
         "netlify-plugin-cache": "^1.0.3",
         "sass": "^1.85.0"
     },

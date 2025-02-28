@@ -2,3 +2,5 @@
 node_modules
 .plugin-clean
 _site
+# esbuild output
+src/scripts/*.js

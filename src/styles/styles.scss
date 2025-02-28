@@ -30,6 +30,10 @@ h1 {
 }
 
 h2 {
+	font-size: 1.4em;
+}
+
+h3 {
 	font-size: 1.2em;
 }
 
@@ -91,4 +95,24 @@ body > footer {
 	margin-top: 24px;
 	border-top: 2px solid black;
 	padding-top: 8px;
+}
+
+.tab-control {
+	.tab-set {
+		.tab {
+
+			&.active {
+				background: blue;
+				color: white;
+			}
+		}
+	}
+
+	.tab-content {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
 }
