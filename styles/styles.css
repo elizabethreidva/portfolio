@@ -52,12 +52,19 @@ body > header .title {
   margin: 0 0 0.4em 0;
   border-bottom: 2px solid black;
 }
-body > header nav > ul {
+body > header nav {
   grid-area: 2/2/3/3;
+}
+body > header nav > ul {
   margin: 0;
   padding: 0;
 }
 body > header nav > ul > li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+body > header nav > ul > li > a {
   display: inline-block;
   margin: 0;
   padding: 0.4em 1em 0.4em 0;
@@ -81,6 +88,17 @@ body > footer {
   padding-top: 8px;
 }
 
+.tab-control .tab-set {
+  border-bottom: 2px solid lightgray;
+  padding: 0 0.25em;
+}
+.tab-control .tab-set .tab {
+  display: inline-block;
+  margin: 0;
+  border: 0;
+  padding: 0.4em 1em;
+  font-weight: 600;
+}
 .tab-control .tab-set .tab.active {
   background: blue;
   color: white;
