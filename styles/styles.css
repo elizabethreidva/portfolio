@@ -42,7 +42,7 @@ body > header img.profile {
   grid-area: 1/1/3/2;
   width: 120px;
   height: 120px;
-  border: 4px solid black;
+  border: 4px solid #2E0F15;
   border-radius: 50%;
 }
 body > header .title {
@@ -51,7 +51,7 @@ body > header .title {
   line-height: 1em;
   padding: 0.6em 0 0.6em 0;
   margin: 0;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #2E0F15;
 }
 body > header nav {
   grid-area: 2/2/3/3;
@@ -67,8 +67,8 @@ body > header nav > ul > li {
 }
 body > header nav > ul > li > a {
   display: inline-block;
-  margin: 0;
-  padding: 0.4em 1em 0.4em 0;
+  margin: 0 0.6em 0 0;
+  padding: 0.4em;
   font-weight: 600;
   background: transparent;
   color: #272838;
@@ -81,11 +81,12 @@ body > header nav > ul > li > a:visited {
   color: #272838;
 }
 body > header nav > ul > li > a.active {
-  color: #FFC43D;
+  color: #272838;
+  background-color: #FFC43D;
 }
 body > header nav > ul > li > a:hover {
   color: #136F63;
-  text-decoration: underline;
+  background-color: rgb(222.5538461538, 249.4461538462, 245.9384615385);
 }
 
 body > div.container {
@@ -101,7 +102,7 @@ body > div.container aside {
 
 body > footer {
   margin-top: 2em;
-  border-top: 2px solid black;
+  border-top: 2px solid #2E0F15;
   padding-top: 0.5em;
 }
 
