@@ -1,1 +1,2 @@
-_nunjucks/
+**/*.snippet.*
+**/*.role.njk

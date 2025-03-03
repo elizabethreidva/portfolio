@@ -190,3 +190,61 @@ body > footer {
 		}
 	}
 }
+
+.accordion {
+	margin: 0;
+	border-top: 2px solid $color-outline;
+	padding: 1em 0;
+
+	.accordion-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: top;
+		cursor: pointer;
+		margin-bottom: 1em;
+	}
+
+	.accordion-title {
+		font-size: 1.2em;
+		margin: 0;
+		padding: 0;
+	}
+
+	.accordion-subtitle {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 1em;
+		margin: 0;
+		padding: 0;
+	}
+
+	.accordion-indicator {
+		display: inline-block;
+		vertical-align: middle;
+		
+		svg {
+			width: 1.5em;
+			height: 1.5em;
+			vertical-align: middle;
+		}
+	}
+
+	.accordion-body {
+		height: 0;
+		overflow: hidden;
+	}
+
+	&.open {
+		.accordion-body {
+			height: auto;
+		}
+
+		.accordion-indicator {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+section.opening {
+	margin-bottom: 2.4em;
+}
