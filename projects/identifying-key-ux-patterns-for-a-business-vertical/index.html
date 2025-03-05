@@ -7,7 +7,7 @@
   <head>
     <config charset="utf-8"></config>
     <config name="viewport" content="width=device-width, initial-scale=1.0"></config>
-    <title>Elizabeth Reid, Design Engineer - Identify Key UX Patterns for a Business Vertical</title>
+    <title>Elizabeth Reid, Design Engineer - Identifying Key UX Patterns for a Business Vertical</title>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -34,39 +34,59 @@
 		<main>
 			
 <article>
-	<h1>Identify Key UX Patterns for a Business Vertical</h1>
-	<section>
-		<h2>Problem statement</h2>
-		
+	<a href="/portfolio/projects/">&lt; Back to Project Stories</a>
+
+	<h1>Identifying Key UX Patterns for a Business Vertical</h1>
+
+	<div class="tab-control">
+		<nav class="tab-set">
+			<button class="tab active" onclick="switchTabs(this,'tc-summary')">Goals &amp; Outcomes</button>
+			<button class="tab" onclick="switchTabs(this,'tc-method')">Methodology</button>
+			<button class="tab" onclick="switchTabs(this,'tc-challenges')">Challenges &amp; Lessons Learned</button>
+		</nav>
+
+		<section class="tab-content summary active" id="tc-summary">
+			<section>
+				<h2>Problem</h2>
+				
 <ul>
 	<li>We observed recurring UI/UX challenges across our product suite, with similar problems being solved in different ways. This lack of cohesion resulted in inconsistent user experiences, creating complexity and confusion for end users. The absence of standardized solutions led to redundant work for designers and developers, hindering efficiency.</li>
 	<li>We also noticed that solutions did not align with the enterprise design system standard in all cases. Non-compliance with corporate standards created further duplication of work for designers and developers.</li>
 </ul>
 	
-	</section>
+			</section>
 
-	<section>
-		<h2>Objective</h2>
-		
+			<section>
+				<h2>Objective</h2>
+				
 <ul>
 	<li>Create a pattern library in design kit and coded components to centralize and standardize the UX patterns common across Risk products</li>
 </ul>
 	
-	</section>
+			</section>
 
-	<section>
-		<h2>Team</h2>
-		
+			<section>
+				<h2>Result</h2>
+				
+<ul><li>After several iterations, we concluded that creating a pattern library wasn't the best solution to meet the immediate needs of the Risk product teams. While standardizing patterns remained important, we needed a faster approach to support the delivery of a critical product. As a result, the project was paused, and the work completed so far was redirected to standardize specific patterns within the critical product deliverable.</li></ul>
+	
+			</section>
+		</section>
+
+		<section class="tab-content method" id="tc-method">
+			<section>
+				<h2>Team</h2>
+				
 <ul>
 	<li>1 Design Engineer (me)</li>
 	<li>Contractors for 2 months (1 Designer, 2 Developers)</li>
 </ul>
 	
-	</section>
+			</section>
 
-	<section>
-		<h2>Methodology</h2>
-		
+			<section>
+				<h2>Process</h2>
+				
 <ul>
 	<li>Identify a subset of products for Phase 1 to control scope of inquiry</li>
 	<li>Gather reference materials for current and near future user-facing screens across the in-scope products</li>
@@ -83,11 +103,12 @@
 	<li>Build out JavaScript to utilize the HTML and CSS and package it along with standard behaviors into a reusable code module</li>
 </ul>
 	
-	</section>
+			</section>
+		</section>
 
-	<section>
-		<h2>Challenges and Lessons Learned</h2>
-		
+		<section class="tab-content challenges" id="tc-challenges">
+			<h2>Challenges and Lessons Learned</h2>
+			
 <ul>
 	<li><p>A pattern library is a solution, not a problem. We accepted the premise of a pattern library as the correct solution, and thus we missed the actual problem–a need to get patterns into the hands of two specific teams ASAP. Although the pattern library was the correct solution for long term sustainability, it did not meet the immediate delivery need.</p>
 	<p>Stakeholders did not initially understand the scope and complexity of work needed to establish a pattern library. A successful pattern library is centralized, maintainable, scalable, and provides reusable components for both design kit and code. The result of this misunderstanding was incorrect and varied expectations of what was realistic for a delivery schedule.</p>
@@ -104,7 +125,8 @@
 	</li>
 </ul>
 	
-	</section>			
+		</section>			
+	</div>
 </article>
 
 
