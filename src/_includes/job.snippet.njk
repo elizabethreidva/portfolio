@@ -1,7 +1,7 @@
 <section class="accordion">
 	<header class="accordion-header" onclick="toggleAccordion(this.parentElement)">
 		<div class="accordion-left">
-			{% block company %}{% endblock %}
+			<p class="accordion-eyebrow">{% block company %}{% endblock %}</p>
 			<h1 class="accordion-title">{% block role %}Role title{% endblock %}</h1>
 		</div>
 		<div class="accordion-right">
