@@ -1,37 +1,59 @@
 <article>
+	<a href="/projects/">&lt; Back to Project Stories</a>
+
 	<h1>{{ pageTitle }}</h1>
-	<section>
-		<h2>Problem statement</h2>
-		{% block problem %}
-		<i>Describe the problem</i>
-		{% endblock %}	
-	</section>
 
-	<section>
-		<h2>Objective</h2>
-		{% block objective %}
-		<i>Define the objective</i>
-		{% endblock %}	
-	</section>
+	<div class="tab-control">
+		<nav class="tab-set">
+			<button class="tab active" onclick="switchTabs(this,'tc-summary')">Goals &amp; Outcomes</button>
+			<button class="tab" onclick="switchTabs(this,'tc-method')">Methodology</button>
+			<button class="tab" onclick="switchTabs(this,'tc-challenges')">Challenges &amp; Lessons Learned</button>
+		</nav>
 
-	<section>
-		<h2>Team</h2>
-		{% block team %}
-		<i>List the team</i>
-		{% endblock %}	
-	</section>
+		<section class="tab-content summary active" id="tc-summary">
+			<section>
+				<h2>Problem</h2>
+				{% block problem %}
+				<i>Describe the problem</i>
+				{% endblock %}	
+			</section>
 
-	<section>
-		<h2>Methodology</h2>
-		{% block method %}
-		<i>Detail the methodology</i>
-		{% endblock %}	
-	</section>
+			<section>
+				<h2>Objective</h2>
+				{% block objective %}
+				<i>Define the objective</i>
+				{% endblock %}	
+			</section>
 
-	<section>
-		<h2>Challenges and Lessons Learned</h2>
-		{% block challenges %}
-		<i>Outline the challenges and lessons learned</i>
-		{% endblock %}	
-	</section>			
+			<section>
+				<h2>Result</h2>
+				{% block results %}
+				<i>Summarize the results</i>
+				{% endblock %}	
+			</section>
+		</section>
+
+		<section class="tab-content method" id="tc-method">
+			<section>
+				<h2>Team</h2>
+				{% block team %}
+				<i>List the team</i>
+				{% endblock %}	
+			</section>
+
+			<section>
+				<h2>Process</h2>
+				{% block method %}
+				<i>Detail the process followed</i>
+				{% endblock %}	
+			</section>
+		</section>
+
+		<section class="tab-content challenges" id="tc-challenges">
+			<h2>Challenges and Lessons Learned</h2>
+			{% block challenges %}
+			<i>Outline the challenges and lessons learned</i>
+			{% endblock %}	
+		</section>			
+	</div>
 </article>

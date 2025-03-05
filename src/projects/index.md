@@ -6,10 +6,10 @@ permalink: "/{{ page | makePath }}/projects/"
 ---
 <h2>{{ pageTitle }}</h2>
 {%- if collections.project.length > 1 -%}
-<ul>
+<ul class="card-list">
 	{%- for project in collections.project -%}
 		{%- if project.data.pageType == 'project' -%}
-		<li><a href="{{ project.page.url }}">{{ project.data.pageTitle }}</a></li>
+		<li class="card"><a href="{{ project.page.url }}">{{ project.data.pageTitle }}</a></li>
 		{%- endif -%}
 	{%- endfor -%}
 </ul>
