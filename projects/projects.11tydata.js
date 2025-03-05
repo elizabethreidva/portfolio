@@ -1,6 +1,6 @@
 export default {
 	layout: "default.njk",
-	tags: "use-case",
-	pageType: "use-case",
+	tags: "project",
+	pageType: "project",
 	permalink: `/{{ page | makePath }}{{ pageTitle | slugify }}/`
 };
