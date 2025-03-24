@@ -48,6 +48,7 @@ export default function (eleventyConfig) {
 	// Copy any .jpg file to `_site`, via Glob pattern
 	// Keeps the same directory structure.
 	eleventyConfig.addPassthroughCopy("./src/**/*.jpg");	
+	eleventyConfig.addPassthroughCopy("./src/**/*.png");	
 };
 
 export const config = {
